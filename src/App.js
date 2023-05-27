@@ -10,7 +10,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <div>
-            <h1>DooTube Website</h1>
+            <h1>DooSi Web Content</h1>
             <div id="thumbnails">
               <Thumbnail thumbnail="https://pbs.twimg.com/media/FxG2dkpaEAElGkC?format=jpg&name=large" videoId="1" title="LE SSERAFIM - Eve, Psyche & The Bluebeard’s wife" />
               <Thumbnail thumbnail="https://pbs.twimg.com/media/FxG2dkracAMVx1a?format=jpg&name=large" videoId="2" title="LE SSERAFIM - UNFORGIVEN (feat. Nile Rodgers)" />
