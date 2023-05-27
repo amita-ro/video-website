@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Thumbnail from './components/Thumbnail';
+import Video from './components/Video';
+import './style.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <div>
+            <h1>My Video Website</h1>
+            <div id="thumbnails">
+              <Thumbnail thumbnail="https://pbs.twimg.com/media/Fw9-vkxaYAA-0NZ?format=jpg" videoId="1" title="LE SSERAFIM - Eve, Psyche & The Bluebeard’s wife" />
+              <Thumbnail thumbnail="https://pbs.twimg.com/media/Fw9-vkxaYAA-0NZ?format=jpg" videoId="2" title="LE SSERAFIM - UNFORGIVEN (feat. Nile Rodgers)" />
+              <Thumbnail thumbnail="https://pbs.twimg.com/media/Fw9-vkxaYAA-0NZ?format=jpg" videoId="3" title="LE SSERAFIM - ANTIFRAGILE " />
+              <Thumbnail thumbnail="https://pbs.twimg.com/media/Fw9-vkxaYAA-0NZ?format=jpg" videoId="4" title="LE SSERAFIM - FEARLESS " />
+            </div>
+          </div>
+        </Route>
+        <Route path="/video/:videoId" render={(props) => <Video videoId={props.match.params.videoId} />} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

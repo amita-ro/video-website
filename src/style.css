@@ -1,0 +1,56 @@
+/* Common styles */
+body {
+    margin: 25px;
+    padding: 1;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    
+  }
+  
+  h1, h2, h3 {
+    margin: 25px;
+    padding: 0;
+    color: white;
+  }
+  
+  #thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+  }
+
+  .thumbnail {
+    width: 500px;
+    height: auto;
+    
+  }
+  
+  .thumbnail img {
+    width: 500px;
+    height: auto
+
+  }
+  
+  .thumbnail h3 {
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .thumbnail {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .thumbnail {
+      width: 100%;
+    }
+  }
+  
